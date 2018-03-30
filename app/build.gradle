@@ -1,0 +1,129 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.hzj.hpai"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "25.0.0"
+
+        multiDexEnabled true;//突破应用方法数65535
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]//默认的渠道
+
+    }
+
+    signingConfigs {
+        debug {}
+
+        release {
+            storeFile file("zpai_path.jks")
+            storePassword "haizhijian"
+            keyAlias "huandengpai"
+            keyPassword "haizhijian"
+        }
+        config{
+            storeFile file("./debug.keystore")
+            storePassword "haizhijian"
+            keyAlias "huandengpai"
+            keyPassword "haizhijian"
+
+        }
+    }
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            //配置在debug下也可以用签名包
+            debuggable true
+            debug{
+                signingConfig signingConfigs.release
+            }
+
+            //指定签名
+            signingConfig signingConfigs.release
+            //指定apk文件名
+            applicationVariants.all { variant ->
+
+                variant.outputs.all{
+//                    def outputFile = output.outputFile
+                    def fileName = "HuanDengPai_v${defaultConfig.versionName}_${variant.productFlavors[0].name}" + ".apk"
+                    outputFileName=fileName
+                }
+
+//                variant.outputs.each { output ->
+//                    def outputFile = output.outputFile
+//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                        def fileName = "HuanDengPai_v${defaultConfig.versionName}_${variant.productFlavors[0].name}" + ".apk"
+//                        output.outputFile = new File(outputFile.parent, fileName)
+//                    }
+//                }
+            }
+
+        }
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/greendao']
+        }
+    }
+
+    productFlavors {
+        xiaomi{}
+        wandoujia{}
+        yingyongbao{}
+        shoujizhushou{}
+        baidu{}
+        huawei{}
+        woshangdian{}
+        anzhi{}
+        lenov{}
+        meizu{}
+        vivo{}
+        oppo{}
+
+    }
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile files('libs/MobCommons-2016.1222.1756.jar')
+    compile 'de.greenrobot:greendao:2.1.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.squareup.okio:okio:0.6.1'
+    compile 'com.zhy:mpermission-api:1.0.0'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.3.1'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.zhy:autolayout:1.4.3'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile project(':library')
+    compile 'pub.devrel:easypermissions:1.0.1'
+}

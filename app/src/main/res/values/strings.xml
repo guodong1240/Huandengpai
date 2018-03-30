@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">幻灯派</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="update_title">有版本更新喽，快来下载吧～</string>
+</resources>

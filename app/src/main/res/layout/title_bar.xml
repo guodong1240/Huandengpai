@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/mainBackground"
+    android:layout_height="wrap_content">
+
+    <RadioButton
+        android:id="@+id/back_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15px"
+        android:button="@null"
+        android:drawableLeft="@mipmap/icon_back"
+        android:text="返回"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="45px" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="制作PPT"
+        android:textColor="#222222"
+        android:textSize="50px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_alignBottom="@id/title_tv"
+        android:background="@android:color/darker_gray" />
+
+</RelativeLayout>

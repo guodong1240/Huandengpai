@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hzj.hpai.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.26" />
+
+    <!--<WebView-->
+    <!--android:id="@+id/myWeb"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1.26"></WebView>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/home_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.hzj.hpai.view.GradientIconView
+                android:id="@+id/home_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bottom_icon="@mipmap/home_gray"
+                app:top_icon="@mipmap/home"></com.hzj.hpai.view.GradientIconView>
+
+            <com.hzj.hpai.view.GradientTextView
+                android:id="@+id/home_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bottom_text_color="@android:color/darker_gray"
+                app:text="精品"
+                app:top_text_color="@color/baseColor"></com.hzj.hpai.view.GradientTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.hzj.hpai.view.GradientIconView
+                android:id="@+id/second_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bottom_icon="@mipmap/home_gray"
+                app:top_icon="@mipmap/home"></com.hzj.hpai.view.GradientIconView>
+
+            <com.hzj.hpai.view.GradientTextView
+                android:id="@+id/second_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bottom_text_color="@android:color/darker_gray"
+                app:text="精品"
+                app:top_text_color="@color/baseColor"></com.hzj.hpai.view.GradientTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/three_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.hzj.hpai.view.GradientIconView
+                android:id="@+id/three_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bottom_icon="@mipmap/home_gray"
+                app:top_icon="@mipmap/home"></com.hzj.hpai.view.GradientIconView>
+
+            <com.hzj.hpai.view.GradientTextView
+                android:id="@+id/three_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bottom_text_color="@android:color/darker_gray"
+                app:text="精品"
+                app:top_text_color="@color/baseColor"></com.hzj.hpai.view.GradientTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/four_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.hzj.hpai.view.GradientIconView
+                android:id="@+id/four_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bottom_icon="@mipmap/home_gray"
+                app:top_icon="@mipmap/home"></com.hzj.hpai.view.GradientIconView>
+
+            <com.hzj.hpai.view.GradientTextView
+                android:id="@+id/four_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bottom_text_color="@android:color/darker_gray"
+                app:text="精品"
+                app:top_text_color="@color/baseColor"></com.hzj.hpai.view.GradientTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/five_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.hzj.hpai.view.GradientIconView
+                android:id="@+id/five_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bottom_icon="@mipmap/home_gray"
+                app:top_icon="@mipmap/home"></com.hzj.hpai.view.GradientIconView>
+
+            <com.hzj.hpai.view.GradientTextView
+                android:id="@+id/five_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bottom_text_color="@android:color/darker_gray"
+                app:text="精品"
+                app:top_text_color="@color/baseColor"></com.hzj.hpai.view.GradientTextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

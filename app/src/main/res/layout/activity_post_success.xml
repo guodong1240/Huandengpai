@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_post_success"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hzj.hpai.activity.PostSuccessActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="恭喜！幻灯派发布成功！"
+        android:textColor="@color/editPPtcolor"
+        android:textSize="50px" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40px"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/darker_gray"
+        android:text="(长按二维码可复制)"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="430px"
+        android:layout_marginTop="40dp"
+        android:layout_height="430px"
+        android:background="@mipmap/public_qr"
+        android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/img_qr"
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:background="@mipmap/ic_launcher"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+
+    <Button
+           android:id="@+id/copy_bt"
+           android:layout_marginTop="40dp"
+           android:layout_width="530px"
+           android:layout_gravity="center"
+           android:layout_height="100px"
+           android:background="@drawable/button_selector"
+           android:text="复制链接"
+           android:textColor="@android:color/white" />
+    <Button
+        android:id="@+id/preview_bt"
+        android:layout_marginTop="20dp"
+        android:layout_width="530px"
+        android:layout_gravity="center"
+        android:layout_height="100px"
+        android:background="@drawable/button_selector"
+        android:text="预览"
+        android:textColor="@android:color/white" />
+    <Button
+        android:id="@+id/sure_bt"
+        android:layout_marginTop="20dp"
+        android:layout_width="530px"
+        android:layout_gravity="center"
+        android:layout_height="100px"
+        android:background="@drawable/button_selector"
+        android:text="确定"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

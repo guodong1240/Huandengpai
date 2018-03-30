@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="baseColor">#d55d44</color>
+    <color name="titlebar">#f7f7f7</color>
+    <color name="dialogcolor">#406599</color>
+    <color name="editPPtcolor">#222222</color>
+    <color name="buttonclick">#ab4833</color>
+    <color name="background">#a4a4a4</color>
+    <color name="recordingBackground">#fff</color>
+    <color name="blue_green">#3ebdb6</color>
+    <color name="upversion_text">#909090</color>
+    <color name="mainBackground">#eeeeee</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_half_trans">#99999999</color>
+</resources>
